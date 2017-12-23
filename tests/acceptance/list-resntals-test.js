@@ -27,10 +27,14 @@ test('should link to contact information.', function (assert) {
 });
 
 test('should list available rentals.', function (assert) {
+  visit('/');
+  andThen(function() {
+    assert.equal(find('.listing').length, 2, 'should see 2 listings');
+  });
 });
 
-test('should filter the list of rentals by city.', function (assert) {
+test('should filter the list of rentals by city.', function () {
 });
 
-test('should show details for a selected rental', function (assert) {
+test('should show details for a selected rental', function () {
 });
